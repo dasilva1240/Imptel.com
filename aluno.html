@@ -75,6 +75,22 @@ function hideSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display= 'none'
 }
+//codigo em script do sobre e o seu dropdown
+
+function toggleDropdown() {
+            const dropdown = document.getElementById('dropdownMenu');
+            const isVisible = dropdown.style.display === 'block';
+            dropdown.style.display = isVisible ? 'none' : 'block';
+        }
+
+        // Opcional: Fecha o dropdown se o usuário clicar fora dele
+        window.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('dropdownMenu');
+            const button = event.target.closest('button');
+            if (!button && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
 </script>
 <body>
     <main>
