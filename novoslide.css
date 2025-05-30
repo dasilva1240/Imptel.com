@@ -1,0 +1,88 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#eceffe, #ced6fb);
+}
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-list .card-item .card-link{
+width: 300px; 
+display: block;
+background:#fff;
+padding: 18px;
+border-radius: 12px;
+text-decoration: none;
+border: 2px solid transparent;
+box-shadow: 0 10px 10px rgba(0, 0, 0,0.05);
+transition: 0.2s ease;
+
+}
+.card-list .card-item .card-link:hover{
+    border-color: #0d2896;
+}
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge{
+    padding: 8px 16px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 16px 0 18px;
+    background: #dde4ff;
+    width: fit-content;
+    border-radius: 50px;
+
+}
+    .card-list .card-link .badge.desp {
+    color: #0d2896;
+    background-color: #ced6fb;
+    }
+
+.card-list .card-link .badge.pa{
+    color: green;
+    background-color: rgb(150, 226, 150);
+   
+}
+.card-list .card-link .badge.ft{
+    color: rgb(170, 78, 2);
+    background-color: rgb(226, 184, 150);
+    
+}
+.card-list .card-link .badge.bc{
+    color: rgb(112, 8, 8);
+    background-color: rgb(226, 150, 150);
+    
+}
+
+.card-list .card-link .card-button{
+    height: 35px;
+    width: 35px;
+    color: #04155a;
+     border-radius: 50%;
+     margin: 30px 0 5px;
+     cursor: pointer;
+     border: 2px solid #04067ed2;
+     transform: rotate(-90deg);
+
+}
+
+.card-list .card-link:hover .card-button{
+    color: #fff;
+    background: #04155a;
+
+}

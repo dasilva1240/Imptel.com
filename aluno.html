@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+   <script src="aluno.js"></script>
+   <link rel="stylesheet" href="aluno.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   
+</head>
+<header>
+    <div class="logo"><img src="imagens/cortada.png" alt=""></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="logo"></div>
+    </div>
+    <nav>
+        <!--codigo do menu para desktop-->
+        <ul class="desktop">
+    
+           <li class="hideOnMobile"> <a href="index.html" class="active"> Home</a></li>
+           <li class="hideOnMobile"> <a href="noticias.html" >Notícias</a>
+            <li class="hideOnMobile"> <a href="#" >Sobre</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="Eventos.html">Eventos</a></li>
+                        <li><a href="historia.html">História</a></li>
+                        <li><a href="instalac.html">Instalações</a></li>
+                        <li><a href="professores.html">Professores</a></li>
+                      
+                    </ul>
+                </div>
+            </li>
+                        <li class="hideOnMobile"><a href="anuncios.html"> Comunicados</a></li>
+                            <li class="hideOnMobile"><a href="secretaria.html">Secretaria Online</a></li>
+                                <li class="hideOnMobile"><a href="aluno.html">Aluno</a></li>
+                                    <li class="hideOnMobile"><a href="cursos.html">Cursos</a></li>
+                                        
+                                    </ul>
+                                    <ul class="hide">
+                                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                                        
+                                    </ul>
+    </nav>
+    
+    <!--codigo da sidebar mobile-->
+    
+    <ul class="sidebar">
+        <li onclick= hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+
+        <li><button onclick="toggleDropdown()"><a href="#/, ">Sobre ▼</a></button>
+            <div class="dropdown">
+            <div class="sub-menu" id="dropdownMenu">
+                <ul>
+                    <li><a href="Eventos.html">Eventos</a></li>
+                    <li><a href="historia.html">História</a></li>
+                    <li><a href="instalac.html">Instalações</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                                  </ul>
+            </div>
+        </div>
+        <li><a href="anuncios.html"> Comunicados</a></li></li>
+        <li><a href="secretaria.html">Secretaria Online</a></li>
+        <li><a href="aluno.html">Aluno</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+       </ul>    
+</header>
+<script>function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'flex'
+const imagem =document.querySelector('.sidebar')
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'none'
+}
+</script>
+<body>
+    <main>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form>
+            <div class="form-group">
+                <label for="process-code">Código de Processo</label>
+                <input type="text" id="process-code" placeholder="Código do processo" >
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Senha" >
+            </div>
+            <button type="submit" class="login-button" onclick="logar();return false">Entrar</button>       
+        </form>
+        <div id="overlay"></div>
+    <div id="customAlert">
+        <p id="alertMessage"></p>
+        <button onclick="closeCustomAlert()">Fechar</button>
+    </div>
+    </div>
+</main>
+</body>
+
+<footer>
+    <div class="footer-col">
+        <h4>INSTALAÇÕES</h4>
+        <ul>
+            <h5>IMPTEL I - Camama | IMPTEL II - Vila de Viana</h5>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>INFORMAÇÕES</h4>
+        <ul>
+        
+            <h5>-Escola Secundária</h5>
+            <h5>943 529 061</h5>
+            <h5>imptel.angola@gmail.com</h5>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>HORÁRIO</h4>
+        <ul>
+        
+            <h5>Segunda á Sexta  
+                07:00 - 16:00</h5>
+                
+    
+            
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>REDES SOCIAIS</h4>
+        <div class="links">
+            <div class="facebook"><a href="https://www.facebook.com/profile.php?id=100057469868635"><i class= "fab fa-facebook-f"></i></a></div>
+           <div class="whatsapp"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwa.me%2F244923393211%3Ffbclid%3DIwAR0PukjoJDxBj_6HHEWYXVgXiZQRuTPDNDyxwgroBjfSdJke4a9HlwQjf-c_aem_AcufdJuepDcjxvZH1ZkyA9Z0p7YrENCTgkqxVBvz7uaWWwW6aSSckX5f4026J-htp_zSO7l71Wi6x8WhqxSYqqSa&h=AT111-OHNBzDa7Is0uz5xrg6wLa3xbsSTYfpoGh9yBpZugmATfGeUWh8i60xjx8U1VMvA5zkoSEVWjB0iQ2oxwLUJXVfjGx7_TmZS9xVZMeTphA1YTyOQf_fJwWaZ8_ZyNqn"><i class= "fab fa-whatsapp "></i></a></div>
+        </div>
+       
+    </div>
+
+</footer>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="justificativo.css">
+    <script src="justificativo.js"></script>
+    <title>justificar Faltas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Justificação de Faltas</h1>
+        
+        <form id="faltasForm">
+          <div class="form-group">
+            <label for="nome">Nome do Aluno:</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="processo">Número de Processo:</label>
+            <input type="number" id="processo" name="processo" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="classe">Classe:</label>
+            <input type="text" id="classe" name="classe" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="sala">Sala:</label>
+            <input type="text" id="sala" name="sala" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="turno">Turno:</label>
+            <select id="turno" name="turno" required>
+              <option value="">Selecione o turno</option>
+              <option value="manha">Manhã</option>
+              <option value="tarde">Tarde</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="justificativa">Justificativa:</label>
+            <textarea id="justificativa" name="justificativa" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label>Atestado Médico:</label>
+            <div class="file-upload">
+              <input type="file" id="atestado" name="atestado" accept="image/*">
+              <p>Arraste ou clique para carregar o atestado médico</p>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Comprovativo de Pagamento:</label>
+            <div class="file-upload">
+              <input type="file" id="pagamento" name="pagamento" accept="image/*">
+              <p>Arraste ou clique para carregar o comprovativo de pagamento</p>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Assinatura do Aluno:</label>
+            <canvas id="assinaturaAluno" class="signature-pad"></canvas>
+            <button type="button" onclick="limparAssinaturaAluno()">Limpar Assinatura</button>
+          </div>
+          
+          <div class="form-group">
+            <label>Assinatura do Encarregado:</label>
+            <canvas id="assinaturaEncarregado" class="signature-pad"></canvas>
+            <button type="button" onclick="limparAssinaturaEncarregado()">Limpar Assinatura</button>
+          </div>
+          
+          <button type="submit">Enviar Justificação</button>
+        </form>
+      </div>
+    
+</body>
+</html>

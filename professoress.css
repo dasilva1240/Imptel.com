@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: aliceblue;
+    justify-content: center; 
+  
+}
+
+:root {
+  --primary-color: #0f04a3;
+  --secondary-color: #2ecc71;
+  --background-color: #f4f6f7;
+  --text-color: #2c3e50;
+  --card-background: white;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Cabeçalho e menu */
+header {
+  background-color: #ffffff;
+  color: #0f04a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 90px;
+  font-weight: bold;
+  color: #0f04a3;
+}
+
+
+nav a{
+  text-decoration: none;
+  color: rgb(2, 2, 100);
+  font-weight: 500;
+  font-size: 19px;
+  padding: 0 30px;
+  height: 100%;
+  text-align: center;
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+nav a:hover, nav a.active{
+  color: white;
+  background-color: rgb(2, 2, 100);
+  transition: 0.3s;
+  margin: 10px;
+  padding: 15px 25px;
+  border-radius: 15px;
+}
+.menu-button{
+  width: 100%;
+  margin-right: 70px;
+}
+.imp_nav img{
+ width: 100px;
+ margin-left: -100px;
+  
+}
+
+.hide{
+  display: flex;
+  justify-content: space-between;
+
+}
+/* inicio dropdown sobre */
+.sub-menu{
+  position: relative;
+  z-index: 999;
+  display: none;
+}
+nav ul li:hover .sub-menu{
+  display: block;
+  position: absolute;
+  background-color: #f0f0f0;
+  margin-top: 9px;
+  margin-left: -50px;
+  border-radius: 20px;
+}
+nav ul li:hover .sub-menu ul{
+  display: block;
+}
+nav ul li:hover .sub-menu ul li{
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border-radius: 15px;
+   
+  
+}
+nav ul li:hover .sub-menu ul li:hover{
+  background-color: #f0f0f0;
+}
+/* fim dropdown sobre */
+
+/* inicio da sidebar & responsividade */
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.468);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+.sidebar li{
+  width: 100%;
+  text-decoration: none;
+}
+.sidebar a{
+  width: 100%;
+  text-decoration: none;
+  color: rgb(2, 2, 100);
+  font-weight: 600;
+  font-size: 25px;
+}
+.sidebar a:hover{
+  color: white;
+  background-color: rgb(2, 2, 100);
+  transition: 0.3s;
+  margin: 10px;
+  padding: 5px 5px;
+  border-radius: 15px;
+}
+.sidebar .sub-menu a{
+  text-decoration: none;
+
+}
+
+.sidebar .sub-menu{
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 200px;
+  min-width: 150px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  z-index: 1000;
+}
+.sidebar button{
+  background-color:transparent;
+  border: none;
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+      display: none;
+  }
+  .menu-button{
+      display: block;
+  }
+  
+}
+@media (min-width: 799.9px) {
+  .hide{
+      display: none;
+  }
+  
+}
+
+
+@media(max-width: 400px){
+  .sidebar{
+      width: 100%;
+  }
+}
+/* fim da sidebar & responsividade */
+.banner{
+  width: 100%;
+  margin-top: 0;
+  border-radius: 20px;
+  
+}
+.imagem img{
+  width: 100px;
+  margin-left: 250px;
+  margin-top: 20px;
+   
+}
+
+
+/* inicio da sidebar & responsividade */
+
+/* fim da sidebar & responsividade */
+.intro-card{
+
+  margin-bottom: 20px;
+  margin: 20px auto;
+  text-align: center;
+  width: 100%;
+  font-weight: 300;
+   max-width: 1200px;
+  padding: 20px;
+  border-radius: 5px;
+  color: #0d2896;
+  background: white;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+
+
+
+
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 500px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1px;
+}
+
+.login-container h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0f04a3 ;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.butt-login button{
+  margin-bottom: -450px;
+  padding: 15px;
+}
+button:hover {
+  background-color: #1e478b;
+}
+
+.forgot {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.forgot a {
+  color: #2b7bff;
+  text-decoration: none;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+/* Professores Page */
+.grid-professores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.professor-card {
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.professor-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.professor-card button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Alunos Page */
+.aluno-perfil {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aluno-header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+.foto-perfil img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.aluno-info input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.trimestres {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.trimestre {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.tabela-notas {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-notas th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+}
+
+.tabela-notas td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nota-input {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+.btn-salvar-notas {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-salvar-notas:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Turmas Page */
+.lista-turmas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.turma-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.turma-card button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
+  max-width: 600px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .trimestres {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-professores,
+  .lista-turmas {
+    grid-template-columns: 1fr;
+  }
+}
+
+    /* inicio footer */
+    footer{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      background-color: #2d2e33;
+      padding: 60px;
+      bottom: 0; 
+      border-top: solid 5px white;
+  }
+  .footer-col{
+      width: 33%;
+      
+  }
+  .footer-col ul{
+      list-style: none;
+  }
+  .footer-col h4{
+      position: relative;
+      margin-bottom:30px;
+      font-weight: 400;
+      font-size: 22px;
+      color: white;
+  
+  }
+  .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -6px;
+      background-color: white;
+      height: 2px;
+      width: 120px;
+  }
+  .footer-col ul li:not(:last-child){
+      margin-bottom: 8px;
+  }
+   .footer-col ul li a{
+      display: block;
+      font-size: 19px;
+      text-transform: capitalize;
+      text-decoration: none;
+      color: #bbbb;
+      transition: 0.4s;
+  }
+  .footer-col ul li a:hover{
+      color: white;
+      padding-left: 2px;
+  }
+  .links a{
+      display: inline-block;
+      height: 44px;
+      width: 44px;
+      color: white;
+      background-color: darkblue;
+      margin: 0 8px 8px 0;
+      text-align: center;
+      line-height: 44px;
+      border-radius: 50%;
+      transition: 0.4s;
+  }
+  .links a:hover{
+  color: darkblue;
+  background-color: white;
+  }
+  h5{
+      color: #bbbb;
+      font-size: 17px;
+      width: 300px;
+  }
+   @media(max-width: 740px){
+      .footer-col{
+          width: 50%;
+          margin-bottom: 30px;
+          text-align: center;
+      }
+      .footer-col h4::before{
+          all: unset;
+      }
+      
+   }
+  @media(max-width: 555px){
+      .footer-col{
+          width: 100%;
+          text-align: center;
+      }
+  }
+  /* fim footer */

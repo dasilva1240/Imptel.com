@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Eventos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_right" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Eventos</title>
+
+</head>
+
+    
+        <header>
+    <div class="logo"><img src="imagens/cortada.png" alt=""></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="logo"></div>
+    </div>
+    <nav>
+        <!--codigo do menu para desktop-->
+        <ul class="desktop">
+    
+           <li class="hideOnMobile"> <a href="index.html" class="active"> Home</a></li>
+           <li class="hideOnMobile"> <a href="noticias.html" >Notícias</a>
+            <li class="hideOnMobile"> <a href="#" >Sobre</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="Eventos.html">Eventos</a></li>
+                        <li><a href="historia.html">História</a></li>
+                        <li><a href="instalac.html">Instalações</a></li>
+                        <li><a href="professores.html">Professores</a></li>
+                      
+                    </ul>
+                </div>
+            </li>
+                        <li class="hideOnMobile"><a href="anuncios.html"> Comunicados</a></li>
+                            <li class="hideOnMobile"><a href="secretaria.html">Secretaria Online</a></li>
+                                <li class="hideOnMobile"><a href="aluno.html">Aluno</a></li>
+                                    <li class="hideOnMobile"><a href="cursos.html">Cursos</a></li>
+                                        
+                                    </ul>
+                                    <ul class="hide">
+                                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                                        
+                                    </ul>
+    </nav>
+    
+    <!--codigo da sidebar mobile-->
+    
+    <ul class="sidebar">
+        <li onclick= hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+
+        <li><button onclick="toggleDropdown()"><a href="#/, ">Sobre ▼</a></button>
+            <div class="dropdown">
+            <div class="sub-menu" id="dropdownMenu">
+                <ul>
+                    <li><a href="Eventos.html">Eventos</a></li>
+                    <li><a href="historia.html">História</a></li>
+                    <li><a href="instalac.html">Instalações</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                                  </ul>
+            </div>
+        </div>
+        <li><a href="anuncios.html"> Comunicados</a></li></li>
+        <li><a href="secretaria.html">Secretaria Online</a></li>
+        <li><a href="aluno.html">Aluno</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+       </ul>    
+</header>
+        
+        <!--codigo em script do botão do menu da sidebar-->
+        
+        <script>function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display= 'flex'
+        const imagem =document.querySelector('.sidebar')
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display= 'none'
+        }
+        //codigo em script do sobre e o seu dropdown
+        
+        function toggleDropdown() {
+                    const dropdown = document.getElementById('dropdownMenu');
+                    const isVisible = dropdown.style.display === 'block';
+                    dropdown.style.display = isVisible ? 'none' : 'block';
+                }
+        
+                // Opcional: Fecha o dropdown se o usuário clicar fora dele
+                window.addEventListener('click', function(event) {
+                    const dropdown = document.getElementById('dropdownMenu');
+                    const button = event.target.closest('button');
+                    if (!button && !dropdown.contains(event.target)) {
+                        dropdown.style.display = 'none';
+                    }
+                });
+        </script>
+        <body>
+        <!-- fim menu -->
+        <div class="container">
+        <section class="main-event">
+            <h2>Evento em Destaque</h2>
+            <div class="event-destaque">
+                <div class="main-image">
+                <img src="Imagens/campeonato.webp" alt="Evento em destaque" class="event-image">
+            </div>
+                <div class="event-info">
+                    <h3>Campeonato de Futebol Interclasse!</h3>
+                    <p><strong>Data:</strong> 5 de abril de 2025</p>
+                    <p><strong>Descrição:</strong> Um campeonato de futebol entre as diferentes turmas do instituto. O evento é uma oportunidade para fortalecer o espírito esportivo e a integração entre os alunos.</p>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <div class="container">
+            <div class="news-item" id="2">
+                <img src="images/desportos.jpg" alt="imagem 2">
+                <div class="news-content">
+                    <h3> Feira de Empreendedorismo</h3>
+                    <p>O Instituto Médio Privado de Tecnologias (IMPTEL) tem o prazer de convidá-lo para a Feira de Empreendedorismo! Venha explorar ideias inovadoras, conectar-se com mentes criativas e descobrir soluções que transformarão o futuro.</p>
+                    <button onclick="window.location.href='Eventos2.html'">Ver mais</button>
+                </div>
+            </div>
+            <!--card 2-->
+            <div class="secundarios">
+    
+            <div class="news-item" id="2">
+                <img src="images/desportos.jpg" alt="imagem 2">
+                <div class="news-content">
+                    <h3>Entrega e Defesa do projeto anual (P.A) </h3>
+                    <p>Prepare sua turma e venha mostrar quem manda dentro de campo!</p>
+                    <button onclick="window.location.href='Eventos3.html'">Ver mais</button>
+                </div>
+            </div>
+
+
+    <!--card 3-->
+            <div class="news-item" id="3">
+                <img src="images/imagem do avanço.jpg" alt="imagem 3">
+                <div class="news-content">
+                    <h3>Entrega e Defesa do projeto de final de curso(PAP)</h3>
+                    <p>Informamos a toda comunidade académica
+                         que nos dias 10, 11 e 12 de junho decorrerão as defesas finais dos 
+                         Trabalhos de Conclusão dos nossos alunos.</p>
+                    <button onclick="window.location.href='Eventos2.html'">Ver mais</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer-col">
+        <h4>INSTALAÇÕES</h4>
+        <ul>
+            <h5>IMPTEL I - Camama | IMPTEL II - Vila de Viana</h5>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>INFORMAÇÕES</h4>
+        <ul>
+        
+            <h5>-Escola Secundária</h5>
+            <h5>943 529 061</h5>
+            <h5>imptel.angola@gmail.com</h5>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>HORÁRIO</h4>
+        <ul>
+        
+            <h5>Segunda á Sexta  
+                07:00 - 16:00</h5>
+                
+    
+            
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>REDES SOCIAIS</h4>
+        <div class="links">
+            <div class="facebook"><a href="https://www.facebook.com/profile.php?id=100057469868635"><i class= "fab fa-facebook-f"></i></a></div>
+           <div class="whatsapp"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwa.me%2F244923393211%3Ffbclid%3DIwAR0PukjoJDxBj_6HHEWYXVgXiZQRuTPDNDyxwgroBjfSdJke4a9HlwQjf-c_aem_AcufdJuepDcjxvZH1ZkyA9Z0p7YrENCTgkqxVBvz7uaWWwW6aSSckX5f4026J-htp_zSO7l71Wi6x8WhqxSYqqSa&h=AT111-OHNBzDa7Is0uz5xrg6wLa3xbsSTYfpoGh9yBpZugmATfGeUWh8i60xjx8U1VMvA5zkoSEVWjB0iQ2oxwLUJXVfjGx7_TmZS9xVZMeTphA1YTyOQf_fJwWaZ8_ZyNqn"><i class= "fab fa-whatsapp "></i></a></div>
+        </div>
+       
+    </div>
+
+</footer>
+</html>
